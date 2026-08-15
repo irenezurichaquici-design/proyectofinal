@@ -1,0 +1,38 @@
+@media(min-width:900px){
+    #bienvenida{
+        flex-wrap: nowrap;
+    }
+
+    #bienvenida img{
+        width: 50%;
+    }
+
+    #mensaje{
+        padding: 20px;
+    }
+
+    #mensaje p{
+        margin-bottom: 20px;
+    }
+
+    #mensaje a{
+        margin-left: 80%;
+    }
+
+    #servicios h2{
+        width: 100%;
+    }
+
+    #gtrabajo h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .teem{
+        width: 23%;
+    }
+
+    .menu2{
+        flex-wrap: nowrap;
+    }
+}

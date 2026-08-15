@@ -1,0 +1,134 @@
+#gtrabajo{
+    grid-area: teem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center; 
+    background-color: #f4f6f9;
+    padding: 50px 0;
+}
+
+#gtrabajo h2{
+    margin-bottom: 50px;   
+    width: 100%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #0b2545;
+    font-size: 2.2rem;
+}
+
+.teem{
+    width: 320px;
+    height: 380px; /* Damos un poco más de espacio vertical */
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+
+#imagen{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(11, 37, 69, 0.1);
+}
+
+#imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.teem:hover img{
+    transform: scale(1.15) rotate(3deg); /* Zoom más elegante y suave */
+}
+
+/* REDES SOCIALES: Ajustadas como una barra flotante superior al hacer hover */
+#redest{
+    width: 80%;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: -20px; /* Aparece flotando arriba de la tarjeta */
+    left: 10%;
+    opacity: 0; /* Ocultas por defecto */
+    visibility: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+#redest span{
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #0b2545;
+    transition: color 0.3s ease;
+}
+
+#redest span:hover{
+    color: #ffd166; /* Amarillo Gloria */
+}
+
+/* Al pasar el mouse, aparecen las redes arriba */
+.teem:hover #redest{
+    opacity: 1;
+    visibility: visible;
+    top: 15px; 
+}
+
+/* CAJA DE DESCRIPCIÓN: Ubicada perfectamente abajo sin solaparse */
+#descripcion{
+    width: 85%;
+    height: 90px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    position: absolute;
+    bottom: 20px; /* Fija en la parte inferior de la tarjeta */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    transition: all 0.4s ease;
+    box-shadow: 0 6px 20px rgba(11, 37, 69, 0.12);
+}
+
+#descripcion h3{
+    width: 100%;
+    text-align: center;
+    background-color: transparent;
+    color: #0b2545;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: .5s ease; 
+}
+
+#descripcion p{
+    color: #457b9d;
+    background-color: transparent; 
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 4px;
+    transition: .5s ease;
+}
+
+/* Efecto hover en la tarjeta de equipo */
+.teem:hover #descripcion{
+    background-color: #0b2545;
+}
+
+.teem:hover #descripcion h3{
+    color: #ffd166; /* El nombre pasa a color amarillo corporativo */
+}
+
+.teem:hover #descripcion p{
+    color: #ffffff; /* El cargo pasa a blanco para destacar */
+}

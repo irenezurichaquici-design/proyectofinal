@@ -1,0 +1,228 @@
+#contenedor{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template:
+    "redes" 50px
+    "menu" 70px
+    "banner" 800px
+    "bienvenida" auto
+    "ofrecemos" auto
+    "accion" auto
+    "productos" auto
+    "teem" auto
+    "pie" auto/1fr;
+}
+
+#datos{
+    grid-area: redes;
+    background-color: #0b2545; /* Azul profundo característico de Gloria */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #134074;
+}
+
+#dir{
+    width: 60%;
+}
+
+#dir p{
+    color: #edf2f4; /* Blanco hueso / claro */
+    font-size: 0.9rem;
+}
+
+#redes{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#redes span{
+    color: #edf2f4;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#redes span:hover{
+    filter: drop-shadow(0 0 8px #ffd166) drop-shadow(0 0 15px #ffd166);
+    color: #ffd166; /* Amarillo lácteo / dorado */
+}
+
+#cabecera {
+    grid-area: menu;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+    background-color: #ffffff; /* Fondo blanco limpio para la cabecera */
+    box-shadow: 0 4px 12px rgba(11, 37, 69, 0.08);
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+#cabecera h2 {
+    width: auto;
+    margin: 0;
+    text-align: left;
+    font-size: 1.5rem;
+    color: #0b2545; /* Azul corporativo fuerte */
+}
+
+#check:checked ~.menu{
+    left: 0;
+}
+
+#check{
+    display: none;
+}
+
+.icon-menu{
+    color: #0b2545;
+    font-size: 2rem;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.icon-menu:hover{
+    color: #134074;
+}
+
+.menu{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 70px;
+    left:-100%;
+    background-color: rgba(11, 37, 69, 0.98); /* Azul marino corporativo translúcido */
+    transition: 0.5s ease;
+    z-index: 12;
+}
+
+.menu li{
+    width: 100%;
+    border-bottom:1px solid rgba(255, 255, 255, 0.1);
+    list-style: none;
+}
+
+.menu li a{
+    text-decoration: none;
+    display: block;
+    line-height: 4;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+.menu li a.active, .menu li a:hover{
+    background-color: #ffd166; /* Acento amarillo/dorado de la marca */
+    color: #0b2545;    
+}
+
+/* 1. CONTENEDOR DEL BANNER */
+#banner {
+    grid-area: banner;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* 2. CONTENEDOR DEL SLIDER */
+.slider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    animation: moverBanner 12s infinite alternate ease-in-out;
+}
+
+@keyframes moverBanner {
+    0% { margin-left: 0%; }
+    30% { margin-left: 0%; }
+    35% { margin-left: -100%; }
+    65% { margin-left: -100%; }
+    70% { margin-left: -200%; }
+    100% { margin-left: -200%; }
+}
+
+/* 3. CADA IMAGEN DEL SLIDER */
+.contenido-slider {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Capa azulada semitransparente sobre el banner para coherencia con la marca */
+.contenido-slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 37, 69, 0.5);
+    z-index: 1;
+}
+
+.contenido-slider div {
+    margin-left: 80px;
+    z-index: 2; /* Texto por encima de la capa */
+}
+
+.contenido-slider h2 {
+    color: #ffd166; /* Amarillo clásico Gloria */
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
+
+.contenido-slider p {
+    color: #edf2f4;
+    font-size: 1.2rem;
+    margin: 15px 0 30px 0;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+}
+
+.contenido-slider a {
+    background-color: #134074;
+    color: white;
+    padding: 12px 28px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 2px solid #ffd166;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contenido-slider a:hover {
+    background-color: #ffd166;
+    color: #0b2545;
+}
+
+/* 5. IMÁGENES DE FONDO DEL BANNER */
+#caja1 {
+    background-image: url(../img/banner.jpg);
+}
+#caja2 {
+    background-image: url(../img/banner2.jpg);
+}
+#caja3 {
+    background-image: url(../img/banner3.jpg);
+}

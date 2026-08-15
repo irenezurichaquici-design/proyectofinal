@@ -1,0 +1,117 @@
+#servicios{
+    width: 100%;
+    max-width: 1200px;
+    min-height: 80vh;
+    padding: 30px 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    background-color: #f4f6f9; /* Fondo suave y limpio para resaltar las tarjetas */
+}
+
+#servicios h2{
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    color: #0b2545; /* Azul profundo característico de Grupo Gloria */
+    width: 100%;
+    text-align: center;
+}
+
+.caja{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    position: relative;
+    cursor: pointer;
+    background-color: #ffffff; /* Tarjetas blancas limpias tipo lácteo */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(11, 37, 69, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+}
+
+.caja span{
+    font-size: 5rem;
+    color: #457b9d; /* Tono celeste/azul grisáceo para los iconos por defecto */
+    transition: 0.5s ease;
+}
+
+.caja h3{
+    width: 100%;
+    text-align: center;
+    color: #0b2545;
+    font-family: 'Poppins', sans-serif;
+}
+
+.caja p{
+    text-align: justify;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+.caja:hover span{
+    color: #ffd166; /* Amarillo clásico de la marca al pasar el mouse */
+}
+
+.caja:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid transparent;
+    box-sizing: border-box;
+    transition: all .8s ease;
+    border-radius: 0 0 0 10px;
+}
+
+.caja:hover:before{
+    width: 100%;
+    height: 100%;
+    border-color: #0b2545; /* Borde animado en azul marino institucion */
+}
+
+.caja:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    box-sizing: border-box;
+    border-top: 3px solid transparent;
+    border-right: 3px solid transparent;
+    transition: 1s ease;
+    border-radius: 0 10px 0 0;
+}
+
+.caja:hover:after{
+    width: 100%;
+    height: 100%;
+    border-color: #ffd166; /* Borde animado secundario en amarillo/dorado Gloria */
+}
+
+@media(min-width:768px){
+    #servicios h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .caja{
+        width: 30%;
+        margin-bottom: 0;
+    }
+}

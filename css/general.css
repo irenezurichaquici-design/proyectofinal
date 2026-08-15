@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;800&display=swap');
+:root{
+--sombra-color:rgba(0,0,0,.5);
+--body-font:oxygen;
+--texto-font-size:2rem;
+}
+
+*{
+    margin:0;
+    padding:0;
+    font-family: nunito, sans-serif;
+    box-sizing: border-box;
+}
+
+p{
+    font-size: 12pt;
+    color: #4a5568; /* Color gris oscuro más suave y legible acorde a la marca */
+}
+
+h2{
+    font-size: 20pt;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #0b2545; /* Azul profundo corporativo Grupo Gloria */
+}
+
+section{
+    padding: 80px 0;
+}
+
+.boton{
+    background-color: #0b2545; /* Azul corporativo institucional */
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    border: 2px solid #ffd166; /* Detalle amarillo/dorado Gloria */
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover{
+    background-color: #ffd166; /* Pasa a amarillo al pasar el mouse */
+    color: #0b2545;
+}
+
+/* Sección de Acción / Programa Ganadero Lechero */
+#accion {
+    background-color: #0b2545; /* Fondo azul profundo corporativo */
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+#accion h2 {
+    color: #ffd166 !important; /* Título en amarillo clásico Gloria */
+    font-size: 2.2rem;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+#accion p {
+    color: #edf2f4 !important; /* Párrafo en blanco claro/hueso */
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+}
+
+#accion a, #accion .boton {
+    background-color: #ffd166;
+    color: #0b2545;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #ffffff;
+    display: inline-block;
+    transition: all 0.3s ease;
+    margin-left: 0;
+}
+
+#accion a:hover, #accion .boton:hover {
+    background-color: #ffffff;
+    color: #0b2545;
+}
+
+
+
+
+
+
+
+
+#contacto {
+    width: 100%;
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#contacto h2 {
+    text-align: center;
+    color: #0b2545; /* Azul profundo corporativo */
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-contacto {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(11, 37, 69, 0.08);
+    border-top: 5px solid #0b2545; /* Banda superior institucional */
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.tarjeta-contacto p {
+    color: #4a5568;
+    font-size: 1.05rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.boton-form {
+    display: inline-block;
+    background-color: #0b2545;
+    color: #ffffff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #ffd166; /* Toque dorado/amarillo Gloria */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.boton-form:hover {
+    background-color: #ffd166;
+    color: #0b2545;
+    border-color: #0b2545;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 209, 102, 0.35);
+}
